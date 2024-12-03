@@ -13,6 +13,7 @@ Route::get('/login', [HomeController::class, 'login'])->name('login');
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/dashboard/post', [PostController::class, 'index'])->name('post');
+    Route::get('/dashboard/post/add', [PostController::class, 'addpost'])->name('addpost');
     Route::get('/dashboard/categories', [CategoriesController::class, 'index'])->name('categories');
     Route::get('/dashboard/users', [UsersController::class, 'index'])->name('users');
 });

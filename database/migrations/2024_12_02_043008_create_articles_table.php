@@ -16,6 +16,7 @@ class CreateArticlesTable extends Migration
             $table->string('slug')->unique();
             $table->text('content');
             $table->string('image')->nullable();
+            $table->date('date_posts');
             $table->boolean('is_published')->default(false);
             $table->timestamps();
         });
